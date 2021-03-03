@@ -28,10 +28,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Card
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateListOf
@@ -44,7 +44,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
 class MainActivity : AppCompatActivity() {
-    val puppyList = mutableStateListOf<PuppyBean>()
+    private val puppyList = mutableStateListOf<PuppyBean>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         initData()// 初始化
     }
 
-    fun initData() {
+    private fun initData() {
         puppyList.add(
             PuppyBean(
                 pic = R.drawable.puppy1,
@@ -175,7 +175,7 @@ fun Greeting(puppyList: SnapshotStateList<PuppyBean>, onclick: ((puppy: PuppyBea
     LazyColumn(
         modifier = Modifier.padding(4.dp)
     ) {
-        items(puppyList) { it ->
+        items(puppyList) {
             Card(
                 Modifier
                     .padding(2.dp)

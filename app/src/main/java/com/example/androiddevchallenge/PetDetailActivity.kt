@@ -40,9 +40,9 @@ class PetDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val puppyBean: PuppyBean? = intent.getSerializableExtra("data") as PuppyBean
+        val puppyBean: PuppyBean = intent.getSerializableExtra("data") as PuppyBean
         setContent {
-            Greeting2(puppyBean!!)
+            Greeting2(puppyBean)
         }
     }
 
