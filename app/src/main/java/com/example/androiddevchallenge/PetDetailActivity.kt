@@ -54,7 +54,6 @@ class PetDetailActivity : AppCompatActivity() {
                 .fillMaxWidth()
                 .clickable(
                     onClick = {
-
                     }
                 )
         ) {

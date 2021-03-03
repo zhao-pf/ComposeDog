@@ -217,6 +217,4 @@ fun Greeting(puppyList: SnapshotStateList<PuppyBean>, onclick: ((puppy: PuppyBea
             }
         }
     }
-
 }
-
