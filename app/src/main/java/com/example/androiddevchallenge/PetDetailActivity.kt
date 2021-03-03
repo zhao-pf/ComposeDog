@@ -15,17 +15,17 @@
  */
 package com.example.androiddevchallenge
 
+import android.os.Bundle
 import androidx.activity.compose.setContent
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.wrapContentHeight
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -61,7 +61,7 @@ class PetDetailActivity : AppCompatActivity() {
             Column {
                 Image(
                     painter = painterResource(it.pic),
-                    contentDescription = null,
+                    contentDescription = null, // decorative
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .fillMaxWidth()
