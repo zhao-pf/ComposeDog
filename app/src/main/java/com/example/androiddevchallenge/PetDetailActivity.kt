@@ -61,7 +61,7 @@ class PetDetailActivity : AppCompatActivity() {
             Column {
                 Image(
                     painter = painterResource(it.pic),
-                    contentDescription = null, // decorative
+                    contentDescription = null,
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .fillMaxWidth()

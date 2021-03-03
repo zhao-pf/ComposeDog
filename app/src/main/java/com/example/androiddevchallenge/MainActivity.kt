@@ -53,9 +53,9 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, PetDetailActivity::class.java)
                 intent.putExtra("data", it)
                 startActivity(intent)
-            }// 列表
+            } // 列表
         }
-        initData()// 初始化
+        initData() // 初始化
     }
 
     private fun initData() {
