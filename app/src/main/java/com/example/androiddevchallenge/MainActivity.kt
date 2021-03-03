@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             } // 列表
         }
-        initData()// 初始化
+        initData() // 初始化
     }
 
     private fun initData() {
@@ -183,7 +183,8 @@ fun Greeting(puppyList: SnapshotStateList<PuppyBean>, onclick: ((puppy: PuppyBea
                     .clickable(
                         onClick = {
                             onclick.invoke(it)
-                    })
+                        }
+                    )
             ) {
                 val padding = Modifier.padding(4.dp)
                 Row {

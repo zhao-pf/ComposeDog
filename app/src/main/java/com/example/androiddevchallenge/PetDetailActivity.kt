@@ -35,7 +35,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
-
 class PetDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,7 +45,6 @@ class PetDetailActivity : AppCompatActivity() {
         }
     }
 
-
     @Composable
     fun Greeting2(it: PuppyBean) {
         Card(
@@ -54,9 +52,11 @@ class PetDetailActivity : AppCompatActivity() {
                 .padding(8.dp)
                 .wrapContentHeight()
                 .fillMaxWidth()
-                .clickable(onClick = {
+                .clickable(
+                    onClick = {
 
-                })
+                    }
+                )
         ) {
             Column {
                 Image(
