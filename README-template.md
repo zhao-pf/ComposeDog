@@ -1,17 +1,18 @@
-# Put title of your app here
+# 小狗领养程序
 
 <!--- Replace <OWNER> with your Github Username and <REPOSITORY> with the name of your repository. -->
 <!--- You can find both of these in the url bar when you open your repository in github. -->
-![Workflow result](https://github.com/<OWNER>/<REPOSITORY>/workflows/Check/badge.svg)
+![Workflow result](https://github.com/zhao-pf/ComposeDog/workflows/Check/badge.svg)
 
 
 ## :scroll: Description
-小狗领养程序
-
+<!--- Describe your app in one or two sentences -->
+android-dev-challenge-compose project.
 
 ## :bulb: Motivation and Context
-#AndroidDevChallenge
-
+<!--- Optionally point readers to interesting parts of your submission. -->
+<!--- What are you especially proud of? -->
+* Jetpack Compose 小狗领养
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->

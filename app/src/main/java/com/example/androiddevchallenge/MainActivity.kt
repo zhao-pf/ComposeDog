@@ -17,11 +17,13 @@ package com.example.androiddevchallenge
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -30,27 +32,25 @@ import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.setContent
-import androidx.compose.ui.res.imageResource
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
-val puppyList = mutableStateListOf<PuppyBean>()
-
 class MainActivity : AppCompatActivity() {
+    val puppyList = mutableStateListOf<PuppyBean>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             title = "宠物收养"// 标题
             Greeting(puppyList) {
-                val intent = Intent(this, PuppyActivity::class.java)
+                val intent = Intent(this, PetDetailActivity::class.java)
                 intent.putExtra("data", it)
                 startActivity(intent)
             }// 列表
         }
         initData()// 初始化
     }
-
 
     fun initData() {
         puppyList.add(
@@ -181,11 +181,12 @@ fun Greeting(puppyList: SnapshotStateList<PuppyBean>, onclick: ((puppy: PuppyBea
                 val padding = Modifier.padding(4.dp)
                 Row {
                     Image(
-                        imageResource(it.pic),
+                        painter = painterResource(it.pic),
+                        contentDescription = null, // decorative
                         modifier = Modifier
                             .width(140.dp)
                             .padding(4.dp),
-                        contentScale = ContentScale.Fit,
+                        contentScale = ContentScale.Crop,
                     )
                     Column(modifier = padding) {
                         Text(
@@ -209,5 +210,5 @@ fun Greeting(puppyList: SnapshotStateList<PuppyBean>, onclick: ((puppy: PuppyBea
         }
     }
 
-
 }
+
