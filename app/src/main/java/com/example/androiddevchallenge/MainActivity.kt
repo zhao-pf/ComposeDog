@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            title = "宠物收养"// 标题
+            title = "宠物收养" // 标题
             Greeting(puppyList) {
                 val intent = Intent(this, PetDetailActivity::class.java)
                 intent.putExtra("data", it)
