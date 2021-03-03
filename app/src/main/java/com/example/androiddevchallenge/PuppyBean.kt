@@ -15,7 +15,6 @@
  */
 package com.example.androiddevchallenge
 
-import com.example.androiddevchallenge.R
 import java.io.Serializable
 
 /**
