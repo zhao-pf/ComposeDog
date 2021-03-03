@@ -14,14 +14,20 @@
  * limitations under the License.
  */
 package com.example.androiddevchallenge
-
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Card
@@ -177,7 +183,7 @@ fun Greeting(puppyList: SnapshotStateList<PuppyBean>, onclick: ((puppy: PuppyBea
                     .clickable(
                         onClick = {
                             onclick.invoke(it)
-                        })
+                    })
             ) {
                 val padding = Modifier.padding(4.dp)
                 Row {
